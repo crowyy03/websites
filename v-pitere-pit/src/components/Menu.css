@@ -144,6 +144,23 @@
     
     .menu-item-row {
         font-size: 1rem;
+        align-items: baseline;
+    }
+    
+    .item-name {
+        flex-shrink: 1;
+        min-width: 0;
+    }
+    
+    .item-dots {
+        flex: 1;
+        min-width: 10px;
+        margin: 0 8px;
+    }
+    
+    .item-price {
+        white-space: nowrap;
+        flex-shrink: 0;
     }
     
     .download-btn {
