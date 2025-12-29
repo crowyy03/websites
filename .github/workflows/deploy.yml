@@ -41,6 +41,10 @@ jobs:
         run: |
           mkdir -p pages/v-pitere-pit
           cp -r v-pitere-pit/dist/* pages/v-pitere-pit/
+          # Копируем index.html для редиректа с корня
+          if [ -f index.html ]; then
+            cp index.html pages/
+          fi
       
       - name: Setup Pages
         uses: actions/configure-pages@v4
