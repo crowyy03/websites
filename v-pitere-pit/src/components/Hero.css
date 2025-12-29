@@ -83,10 +83,10 @@
         height: auto;
         min-height: auto;
         background-position: center top;
-        background-size: contain;
+        background-size: 100% auto;
         background-repeat: no-repeat;
         overflow: visible;
-        aspect-ratio: 853 / 640;
+        padding-top: 75%; /* 640/853 ≈ 0.75 - соотношение сторон фото */
         position: relative;
     }
     
@@ -128,10 +128,10 @@
     .hero {
         height: auto;
         min-height: auto;
-        background-size: contain;
+        background-size: 100% auto;
         background-position: center top;
         overflow: visible;
-        aspect-ratio: 853 / 640;
+        padding-top: 75%; /* 640/853 ≈ 0.75 - соотношение сторон фото */
     }
     
     .hero-title {
