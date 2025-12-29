@@ -1,0 +1,33 @@
+:root {
+  /* Editorial Theme Colors */
+  --bg-primary: #f4f4f0;
+  /* Off-white paper */
+  --bg-secondary: #ffffff;
+  --bg-glass: rgba(255, 255, 255, 0.9);
+
+  --text-primary: #1a1a1a;
+  --text-secondary: #4a4a4a;
+  --text-accent: #9e1b32;
+  /* Deep Red from menu */
+
+  --accent-red: #9e1b32;
+  --accent-black: #000000;
+
+  /* Typography */
+  --font-heading: 'Anton', sans-serif;
+  /* Impactful, magazine style */
+  --font-body: 'Inter', sans-serif;
+
+  /* Layout */
+  --container-width: 1200px;
+  --header-height: 90px;
+}
+
+.dark-mode {
+  --bg-primary: #050505;
+  --bg-secondary: #121212;
+  --text-primary: #ffffff;
+  --text-secondary: #a0a0a0;
+  --bg-glass: rgba(5, 5, 5, 0.9);
+  /* Red stays red */
+}
