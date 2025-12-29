@@ -82,11 +82,11 @@
     .hero {
         height: auto;
         min-height: auto;
-        background-position: center center;
-        background-size: contain;
+        background-position: center top;
+        background-size: 100% auto;
         background-repeat: no-repeat;
         overflow: visible;
-        padding-top: 75%; /* 640/853 ≈ 0.75 - соотношение сторон фото */
+        min-height: calc(100vw * 640 / 853); /* Высота = ширина * (высота фото / ширина фото) */
         position: relative;
     }
     
@@ -128,10 +128,10 @@
     .hero {
         height: auto;
         min-height: auto;
-        background-size: contain;
-        background-position: center center;
+        background-size: 100% auto;
+        background-position: center top;
         overflow: visible;
-        padding-top: 75%; /* 640/853 ≈ 0.75 - соотношение сторон фото */
+        min-height: calc(100vw * 640 / 853); /* Высота = ширина * (высота фото / ширина фото) */
     }
     
     .hero-title {
