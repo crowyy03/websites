@@ -88,6 +88,7 @@
         overflow: visible;
         min-height: calc(100vw * 640 / 853); /* Высота = ширина * (высота фото / ширина фото) */
         position: relative;
+        margin-top: var(--header-height); /* Отступ сверху для навбара */
     }
     
     .hero-title {
@@ -132,6 +133,7 @@
         background-position: center top;
         overflow: visible;
         min-height: calc(100vw * 640 / 853); /* Высота = ширина * (высота фото / ширина фото) */
+        margin-top: var(--header-height); /* Отступ сверху для навбара */
     }
     
     .hero-title {
