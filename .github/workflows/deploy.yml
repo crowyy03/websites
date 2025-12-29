@@ -37,13 +37,18 @@ jobs:
         working-directory: ./v-pitere-pit
         run: npm run build
       
+      - name: Create pages directory structure
+        run: |
+          mkdir -p pages/v-pitere-pit
+          cp -r v-pitere-pit/dist/* pages/v-pitere-pit/
+      
       - name: Setup Pages
         uses: actions/configure-pages@v4
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './v-pitere-pit/dist'
+          path: './pages'
 
   deploy:
     environment:
