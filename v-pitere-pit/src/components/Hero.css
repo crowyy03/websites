@@ -79,7 +79,55 @@
 }
 
 @media (max-width: 768px) {
+    .hero {
+        height: 100vh;
+        min-height: 600px;
+        background-position: center top;
+        background-size: cover;
+    }
+    
     .hero-title {
-        font-size: 3.5rem;
+        font-size: 3rem;
+        margin: 1.5rem 0;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.85rem;
+        letter-spacing: 0.2em;
+    }
+    
+    .hero-footer {
+        margin-top: 2.5rem;
+        font-size: 0.8rem;
+        padding: 12px 20px;
+    }
+    
+    .hero-content {
+        padding: 0 15px;
+    }
+    
+    .hero::before {
+        font-size: 25vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        min-height: 500px;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+        margin: 1rem 0;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.75rem;
+    }
+    
+    .hero-footer {
+        margin-top: 2rem;
+        font-size: 0.75rem;
+        padding: 10px 15px;
     }
 }

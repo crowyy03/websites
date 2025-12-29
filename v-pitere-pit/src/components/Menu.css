@@ -118,3 +118,36 @@
         grid-column: span 1;
     }
 }
+
+@media (max-width: 768px) {
+    .menu-section {
+        padding: 60px 0;
+    }
+    
+    .menu-tabs {
+        gap: 1rem;
+        margin-bottom: 2.5rem;
+        flex-wrap: wrap;
+    }
+    
+    .tab-btn {
+        font-size: 1.5rem;
+    }
+    
+    .menu-content {
+        gap: 2rem;
+    }
+    
+    .category-title {
+        font-size: 1.5rem;
+    }
+    
+    .menu-item-row {
+        font-size: 1rem;
+    }
+    
+    .download-btn {
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+    }
+}

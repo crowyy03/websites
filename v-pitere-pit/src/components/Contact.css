@@ -54,11 +54,38 @@
 }
 
 @media (max-width: 768px) {
+    .contact-section {
+        padding: 60px 0;
+    }
+    
     .contact-layout {
         flex-direction: column;
+        gap: 2.5rem;
     }
-
+    
+    .contact-info .section-title {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    .info-block {
+        margin-bottom: 2rem;
+    }
+    
+    .info-block h3 {
+        font-size: 1.3rem;
+    }
+    
+    .info-block p {
+        font-size: 1rem;
+    }
+    
     .contact-map {
         height: 300px;
+    }
+    
+    .hours-grid {
+        grid-template-columns: 80px 1fr;
+        gap: 8px;
     }
 }
