@@ -82,8 +82,8 @@
     .hero {
         height: auto;
         min-height: auto;
-        background-position: center top;
-        background-size: 100% auto;
+        background-position: center center;
+        background-size: contain;
         background-repeat: no-repeat;
         overflow: visible;
         padding-top: 75%; /* 640/853 ≈ 0.75 - соотношение сторон фото */
@@ -128,8 +128,8 @@
     .hero {
         height: auto;
         min-height: auto;
-        background-size: 100% auto;
-        background-position: center top;
+        background-size: contain;
+        background-position: center center;
         overflow: visible;
         padding-top: 75%; /* 640/853 ≈ 0.75 - соотношение сторон фото */
     }
