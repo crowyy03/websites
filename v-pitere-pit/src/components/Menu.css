@@ -119,6 +119,14 @@
     }
 }
 
+@media (max-width: 900px) {
+    .menu-description {
+        margin: 0 auto 2rem;
+        font-size: 1rem;
+        padding: 0 20px;
+    }
+}
+
 @media (max-width: 768px) {
     .menu-section {
         padding: 60px 0;

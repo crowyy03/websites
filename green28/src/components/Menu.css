@@ -98,6 +98,23 @@
     line-height: 1.4;
 }
 
+.menu-description {
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-primary);
+    text-align: left;
+}
+
+.menu-description p {
+    margin-bottom: 1.2rem;
+}
+
+.menu-description p:last-child {
+    margin-bottom: 0;
+}
+
 .menu-download {
     grid-column: span 2;
     text-align: center;
@@ -130,6 +147,14 @@
 
     .menu-download {
         grid-column: span 1;
+    }
+}
+
+@media (max-width: 900px) {
+    .menu-description {
+        margin: 0 auto 2rem;
+        font-size: 1rem;
+        padding: 0 20px;
     }
 }
 
