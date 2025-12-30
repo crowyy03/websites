@@ -70,31 +70,30 @@ export const SignatureExperience = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.3 }}
-                className="max-w-6xl mx-auto bg-gradient-to-br from-amber-light/20 to-white rounded-3xl p-16 md:p-20 niche-container border border-amber-light/30"
+                className="max-w-6xl mx-auto bg-gradient-to-br from-amber-light/20 to-white rounded-3xl p-8 md:p-20 niche-container border border-amber-light/30"
             >
-                <div className="grid md:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <h3 className="text-4xl md:text-5xl font-bold mb-6 text-warm-black handwritten">
-                            Мезе для совместного ужина
-                        </h3>
-                        <p className="text-lg md:text-xl text-warm-black/70 leading-relaxed mb-6 break-words">
-                            В греческой культуре еда создана для того, чтобы её делили. Наша подборка мезе 
-                            включает традиционные соусы, маленькие тарелки и блюда с гриля, идеальные 
-                            для передачи вокруг стола. Закажите несколько блюд, поделитесь историями 
-                            и насладитесь неторопливым ритмом средиземноморской трапезы.
-                        </p>
-                        <p className="text-lg md:text-xl text-warm-black/70 leading-relaxed break-words">
-                            Каждое блюдо готовится с вниманием к аутентичным вкусам, используя 
-                            качественные ингредиенты, которые отражают простоту и свежесть 
-                            кухни греческих островов.
-                        </p>
-                    </div>
-                    <div className="relative">
+                <div className="flex flex-col md:grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+                    <div className="relative order-1 md:order-2 w-full">
                         <img
                             src={`${import.meta.env.BASE_URL}assets/mezze_image.png`}
                             alt="Мезе для совместного ужина"
                             className="w-full h-auto rounded-2xl"
                         />
+                    </div>
+                    <div className="order-2 md:order-1">
+                        <h3 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6 text-warm-black handwritten">
+                            Мезе для совместного ужина
+                        </h3>
+                        <p className="text-base md:text-xl text-warm-black/70 leading-relaxed mb-4 break-words">
+                            В греческой культуре еда создана для того, чтобы её делили. Наша подборка мезе 
+                            включает традиционные соусы, маленькие тарелки и блюда с гриля, идеальные 
+                            для передачи вокруг стола.
+                        </p>
+                        <p className="text-base md:text-xl text-warm-black/70 leading-relaxed break-words hidden md:block">
+                            Каждое блюдо готовится с вниманием к аутентичным вкусам, используя 
+                            качественные ингредиенты, которые отражают простоту и свежесть 
+                            кухни греческих островов.
+                        </p>
                     </div>
                 </div>
             </motion.div>

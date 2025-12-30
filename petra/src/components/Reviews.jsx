@@ -47,7 +47,7 @@ export const Reviews = () => {
                 ))}
             </motion.div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
                 {REVIEWS.map((review, index) => {
                     const ovalStyles = [
                         { borderRadius: '65% 35% 40% 60% / 40% 60% 35% 65%' },

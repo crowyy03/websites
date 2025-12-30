@@ -60,4 +60,11 @@
     font-family: 'Dancing Script', cursive;
     font-weight: 600;
   }
+
+  @media (max-width: 768px) {
+    .handwritten {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 500;
+    }
+  }
 }

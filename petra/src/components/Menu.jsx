@@ -60,23 +60,25 @@ export const Menu = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.3 }}
-                className="flex flex-wrap justify-center gap-4 mb-16 sticky top-24 bg-plaster/80 backdrop-blur-sm py-4 z-40 rounded-full"
+                className="mb-16 sticky top-20 md:top-24 z-40 bg-plaster/80 backdrop-blur-sm py-4 -mx-6 px-6"
             >
-                {categories.map((category) => (
-                    <button
-                        key={category}
-                        onClick={() => setActiveCategory(category)}
-                        className={`
-                            px-6 py-2 rounded-full font-medium transition-all duration-300
-                            ${(activeCategory || defaultCategory) === category
-                                ? 'bg-amber text-warm-black shadow-niche'
-                                : 'bg-white text-warm-black/60 hover:text-warm-black hover:bg-white/80'
-                            }
-                        `}
-                    >
-                        {category}
-                    </button>
-                ))}
+                <div className="flex md:flex-wrap md:justify-center gap-3 md:gap-4 overflow-x-auto scrollbar-hide pb-2">
+                    {categories.map((category) => (
+                        <button
+                            key={category}
+                            onClick={() => setActiveCategory(category)}
+                            className={`
+                                px-5 py-2 rounded-full font-medium transition-all duration-300 whitespace-nowrap flex-shrink-0
+                                ${(activeCategory || defaultCategory) === category
+                                    ? 'bg-amber text-warm-black shadow-niche'
+                                    : 'bg-white text-warm-black/60 hover:text-warm-black hover:bg-white/80'
+                                }
+                            `}
+                        >
+                            {category}
+                        </button>
+                    ))}
+                </div>
             </motion.div>
 
             <AnimatePresence mode="wait">
