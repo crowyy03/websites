@@ -235,25 +235,27 @@ export const REVIEWS = [
     }
 ];
 
+const BASE_URL = import.meta.env.BASE_URL;
+
 export const GALLERY_IMAGES = [
-    '/assets/interior_1.jpg',
-    '/assets/interior_2.jpg',
-    '/assets/interior_3.jpg',
-    '/assets/detail_1.jpg',
-    '/assets/detail_2.jpg',
-    '/assets/food_1.jpg',
-    '/assets/food_2.jpg',
-    '/assets/food_3.jpg',
-    '/assets/interior_4.jpg',
-    '/assets/interior_5.jpg',
-    '/assets/interior_6.jpg',
-    '/assets/interior_7.jpg',
-    '/assets/interior_8.jpg',
-    '/assets/interior_9.jpg',
-    '/assets/detail_3.jpg',
-    '/assets/gallery_1.jpg',
-    '/assets/gallery_2.jpg',
-    '/assets/gallery_3.jpg',
+    `${BASE_URL}assets/interior_1.jpg`,
+    `${BASE_URL}assets/interior_2.jpg`,
+    `${BASE_URL}assets/interior_3.jpg`,
+    `${BASE_URL}assets/detail_1.jpg`,
+    `${BASE_URL}assets/detail_2.jpg`,
+    `${BASE_URL}assets/food_1.jpg`,
+    `${BASE_URL}assets/food_2.jpg`,
+    `${BASE_URL}assets/food_3.jpg`,
+    `${BASE_URL}assets/interior_4.jpg`,
+    `${BASE_URL}assets/interior_5.jpg`,
+    `${BASE_URL}assets/interior_6.jpg`,
+    `${BASE_URL}assets/interior_7.jpg`,
+    `${BASE_URL}assets/interior_8.jpg`,
+    `${BASE_URL}assets/interior_9.jpg`,
+    `${BASE_URL}assets/detail_3.jpg`,
+    `${BASE_URL}assets/gallery_1.jpg`,
+    `${BASE_URL}assets/gallery_2.jpg`,
+    `${BASE_URL}assets/gallery_3.jpg`,
 ];
 
 export const INFO = {

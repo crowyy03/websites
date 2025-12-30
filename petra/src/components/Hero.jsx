@@ -8,7 +8,7 @@ export const Hero = () => {
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
             <div className="absolute inset-0 z-0">
                 <img
-                    src="/assets/hero_image.png"
+                    src={`${import.meta.env.BASE_URL}assets/hero_image.png`}
                     alt="Petra Interior"
                     className="w-full h-full object-cover"
                 />
