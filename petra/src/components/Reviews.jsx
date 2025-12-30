@@ -72,7 +72,7 @@ export const Reviews = () => {
                                 {[...Array(5)].map((_, i) => (
                                     <Star
                                         key={i}
-                                        size={16}
+                                        size={14}
                                         className={i < review.rating ? 'fill-amber text-amber' : 'fill-gray-200 text-gray-200'}
                                     />
                                 ))}
@@ -82,7 +82,7 @@ export const Reviews = () => {
                                 "{review.text}"
                             </p>
                             
-                            <div className="flex flex-col items-center gap-1 text-sm mt-auto">
+                            <div className="flex flex-col items-center gap-1 text-xs mt-auto">
                                 <span className="font-medium text-warm-black">{review.author}</span>
                                 <span className="text-warm-black/40">{new Date(review.date).toLocaleDateString('ru-RU')}</span>
                             </div>

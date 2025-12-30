@@ -110,7 +110,7 @@ export const Menu = () => {
                                 style={style}
                                 className="bg-white p-6 shadow-sm border border-white/50 flex flex-col h-full overflow-hidden text-center"
                             >
-                                <h3 className="text-xl md:text-2xl font-semibold text-warm-black break-words leading-tight mb-3 handwritten">
+                                <h3 className="text-lg md:text-2xl font-semibold text-warm-black break-words leading-tight mb-3 handwritten">
                                     {item.name}
                                 </h3>
 
