@@ -27,20 +27,29 @@ jobs:
         with:
           node-version: '20'
           cache: 'npm'
-          cache-dependency-path: 'v-pitere-pit/package-lock.json'
       
-      - name: Install dependencies
+      - name: Install dependencies (v-pitere-pit)
         working-directory: ./v-pitere-pit
         run: npm ci
       
-      - name: Build
+      - name: Build (v-pitere-pit)
         working-directory: ./v-pitere-pit
+        run: npm run build
+      
+      - name: Install dependencies (petra)
+        working-directory: ./petra
+        run: npm ci
+      
+      - name: Build (petra)
+        working-directory: ./petra
         run: npm run build
       
       - name: Create pages directory structure
         run: |
           mkdir -p pages/v-pitere-pit
+          mkdir -p pages/petra
           cp -r v-pitere-pit/dist/* pages/v-pitere-pit/
+          cp -r petra/dist/* pages/petra/
           # Копируем index.html для редиректа с корня
           if [ -f index.html ]; then
             cp index.html pages/

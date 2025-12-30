@@ -28,3 +28,6 @@ lerna-debug.log*
 
 # Photo folder (не загружаем исходные фото)
 photo/
+
+# Info folders (не загружаем исходные данные)
+*/info/
