@@ -236,16 +236,24 @@ export const REVIEWS = [
 ];
 
 export const GALLERY_IMAGES = [
-    // First 9 - mostly interior (all unique, no duplicates)
     '/assets/interior_1.jpg',
     '/assets/interior_2.jpg',
     '/assets/interior_3.jpg',
+    '/assets/interior_4.jpg',
+    '/assets/interior_5.jpg',
+    '/assets/interior_6.jpg',
+    '/assets/interior_7.jpg',
+    '/assets/interior_8.jpg',
+    '/assets/interior_9.jpg',
     '/assets/detail_1.jpg',
     '/assets/detail_2.jpg',
+    '/assets/detail_3.jpg',
     '/assets/food_1.jpg',
     '/assets/food_2.jpg',
     '/assets/food_3.jpg',
-    // Note: When more photos are available, add them here to reach 18 total
+    '/assets/gallery_1.jpg',
+    '/assets/gallery_2.jpg',
+    '/assets/gallery_3.jpg',
 ];
 
 export const INFO = {
