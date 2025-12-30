@@ -51,14 +51,24 @@ jobs:
         working-directory: ./green28
         run: npm run build
       
+      - name: Install dependencies (La_Piada)
+        working-directory: ./La_Piada
+        run: npm ci
+      
+      - name: Build (La_Piada)
+        working-directory: ./La_Piada
+        run: npm run build
+      
       - name: Create pages directory structure
         run: |
           mkdir -p pages/v-pitere-pit
           mkdir -p pages/petra
           mkdir -p pages/green28
+          mkdir -p pages/La_Piada
           cp -r v-pitere-pit/dist/* pages/v-pitere-pit/
           cp -r petra/dist/* pages/petra/
           cp -r green28/dist/* pages/green28/
+          cp -r La_Piada/dist/* pages/La_Piada/
           # Копируем index.html для редиректа с корня
           if [ -f index.html ]; then
             cp index.html pages/

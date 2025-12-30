@@ -1,0 +1,42 @@
+:root {
+  /* Итальянская цветовая палитра - теплые тона */
+  --bg-primary: #faf8f5;
+  /* Светлый кремовый фон */
+  --bg-secondary: #fffefb;
+  --bg-glass: rgba(250, 248, 245, 0.95);
+
+  --text-primary: #2c2416;
+  /* Темный коричневый */
+  --text-secondary: #5a4a3a;
+  --text-accent: #8b6f47;
+  /* Золотисто-коричневый акцент */
+
+  --accent-red: #c41e3a;
+  /* Итальянский красный */
+  --accent-red-dark: #9e1b32;
+  --accent-red-light: #e63950;
+  
+  --accent-green: #2d5016;
+  /* Итальянский зеленый */
+  --accent-green-dark: #1f350f;
+  --accent-green-light: #4a7a28;
+
+  /* Typography */
+  --font-heading: 'Anton', sans-serif;
+  /* Impactful, magazine style */
+  --font-body: 'Inter', sans-serif;
+
+  /* Layout */
+  --container-width: 1200px;
+  --header-height: 90px;
+}
+
+.dark-mode {
+  --bg-primary: #1a1612;
+  /* Темный коричневый фон */
+  --bg-secondary: #2a241f;
+  --text-primary: #f5f0e8;
+  --text-secondary: #c4b5a0;
+  --bg-glass: rgba(26, 22, 18, 0.95);
+  /* Итальянские цвета остаются */
+}
