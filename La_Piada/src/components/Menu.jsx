@@ -201,6 +201,30 @@ const Menu = () => {
                     ))}
                 </div>
 
+                <div className="menu-content menu-content-desktop">
+                    {menuData.food.map((category, index) => (
+                        <div key={index} className="menu-category">
+                            <h3 className="category-title">{category.category}</h3>
+                            <div className="menu-items">
+                                {category.items.map((item, i) => (
+                                    <div key={i} className="menu-item">
+                                        <div className="menu-item-row">
+                                            <span className="item-name">{item.name}</span>
+                                            <span className="item-price">{item.price} ₽</span>
+                                        </div>
+                                        {item.weight && (
+                                            <p className="item-weight">{item.weight}</p>
+                                        )}
+                                        {item.description && (
+                                            <p className="item-description">{item.description}</p>
+                                        )}
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    ))}
+                </div>
+
                 <div className="menu-download">
                     <p>Не нашли то, что искали?</p>
                     <a href="#" className="download-btn">СКАЧАТЬ ПОЛНОЕ МЕНЮ PDF</a>

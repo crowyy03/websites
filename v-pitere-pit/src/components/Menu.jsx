@@ -132,6 +132,10 @@ const menuData = {
 
 const Menu = () => {
     const [activeTab, setActiveTab] = useState('food');
+    const [selectedCategory, setSelectedCategory] = useState(0);
+
+    const currentCategories = menuData[activeTab];
+    const currentCategoryData = currentCategories[selectedCategory];
 
     return (
         <section id="menu" className="menu-section">
@@ -147,43 +151,76 @@ const Menu = () => {
                 <div className="menu-tabs">
                     <button
                         className={`tab-btn ${activeTab === 'food' ? 'active' : ''}`}
-                        onClick={() => setActiveTab('food')}
+                        onClick={() => {
+                            setActiveTab('food');
+                            setSelectedCategory(0);
+                        }}
                     >
                         КУХНЯ
                     </button>
                     <button
                         className={`tab-btn ${activeTab === 'bar' ? 'active' : ''}`}
-                        onClick={() => setActiveTab('bar')}
+                        onClick={() => {
+                            setActiveTab('bar');
+                            setSelectedCategory(0);
+                        }}
                     >
                         БАР
                     </button>
                 </div>
 
+                <div className="menu-categories-scroll">
+                    {currentCategories.map((category, index) => (
+                        <button
+                            key={index}
+                            className={`category-tab ${selectedCategory === index ? 'active' : ''}`}
+                            onClick={() => setSelectedCategory(index)}
+                        >
+                            {category.category}
+                        </button>
+                    ))}
+                </div>
+
                 <AnimatePresence mode="wait">
                     <motion.div
-                        key={activeTab}
+                        key={`${activeTab}-${selectedCategory}`}
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -20 }}
                         transition={{ duration: 0.3 }}
-                        className="menu-content"
+                        className="menu-content menu-content-mobile"
                     >
-                        {menuData[activeTab].map((category, index) => (
-                            <div key={index} className="menu-category">
-                                <h3 className="category-title">{category.category} {category.price && <span className="set-price">{category.price}</span>}</h3>
-                                <div className="menu-items">
-                                    {category.items.map((item, i) => (
-                                        <div key={i} className="menu-item-row">
-                                            <span className="item-name">{item.name}</span>
-                                            <span className="item-dots"></span>
-                                            <span className="item-price">{item.price}</span>
-                                        </div>
-                                    ))}
-                                </div>
+                        <div className="menu-category">
+                            <h3 className="category-title">{currentCategoryData.category} {currentCategoryData.price && <span className="set-price">{currentCategoryData.price}</span>}</h3>
+                            <div className="menu-items">
+                                {currentCategoryData.items.map((item, i) => (
+                                    <div key={i} className="menu-item-row">
+                                        <span className="item-name">{item.name}</span>
+                                        <span className="item-dots"></span>
+                                        <span className="item-price">{item.price}</span>
+                                    </div>
+                                ))}
                             </div>
-                        ))}
+                        </div>
                     </motion.div>
                 </AnimatePresence>
+
+                <div className="menu-content menu-content-desktop">
+                    {currentCategories.map((category, index) => (
+                        <div key={index} className="menu-category">
+                            <h3 className="category-title">{category.category} {category.price && <span className="set-price">{category.price}</span>}</h3>
+                            <div className="menu-items">
+                                {category.items.map((item, i) => (
+                                    <div key={i} className="menu-item-row">
+                                        <span className="item-name">{item.name}</span>
+                                        <span className="item-dots"></span>
+                                        <span className="item-price">{item.price}</span>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    ))}
+                </div>
 
                 <div className="menu-download">
                     <p>Не нашли то, что искали?</p>
