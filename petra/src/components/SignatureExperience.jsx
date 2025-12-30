@@ -91,7 +91,7 @@ export const SignatureExperience = () => {
                     </div>
                     <div className="relative">
                         <img
-                            src="/assets/mezze_image.png"
+                            src={`${import.meta.env.BASE_URL}assets/mezze_image.png`}
                             alt="Мезе для совместного ужина"
                             className="w-full h-auto rounded-2xl"
                         />
