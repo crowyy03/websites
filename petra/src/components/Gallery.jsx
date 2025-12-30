@@ -7,7 +7,6 @@ export const Gallery = () => {
     const [selectedImage, setSelectedImage] = useState(null);
     const [visibleCount, setVisibleCount] = useState(9);
 
-    // Remove duplicates for display - only show unique images
     const uniqueImages = Array.from(new Set(GALLERY_IMAGES));
     const visibleImages = uniqueImages.slice(0, visibleCount);
     const hasMore = visibleCount < uniqueImages.length;
@@ -73,7 +72,6 @@ export const Gallery = () => {
                 </motion.div>
             )}
 
-            {/* Lightbox */}
             <AnimatePresence>
                 {selectedImage && (
                     <motion.div

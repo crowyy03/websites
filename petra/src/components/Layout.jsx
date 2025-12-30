@@ -12,7 +12,6 @@ const Navbar = () => {
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 50);
             
-            // Определяем активную секцию
             const sections = ['menu', 'gallery', 'reviews', 'contact'];
             const scrollPosition = window.scrollY + 200;
             
@@ -29,7 +28,7 @@ const Navbar = () => {
             }
         };
         window.addEventListener('scroll', handleScroll);
-        handleScroll(); // Вызываем сразу для начального состояния
+        handleScroll();
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
@@ -50,7 +49,6 @@ const Navbar = () => {
                     PETRA
                 </a>
 
-                {/* Desktop Nav */}
                 <div className="hidden md:flex items-center gap-8">
                     {navLinks.map((link) => (
                         <a
@@ -72,7 +70,6 @@ const Navbar = () => {
                     </a>
                 </div>
 
-                {/* Mobile Toggle */}
                 <button
                     className="md:hidden z-50"
                     onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -80,7 +77,6 @@ const Navbar = () => {
                     {mobileMenuOpen ? <X /> : <Menu />}
                 </button>
 
-                {/* Mobile Menu */}
                 <AnimatePresence>
                     {mobileMenuOpen && (
                         <motion.div
@@ -150,7 +146,7 @@ const Footer = () => {
 
 export const Layout = ({ children }) => {
     return (
-        <div className="min-h-screen flex flex-col bg-noise bg-fixed">
+        <div className="min-h-screen flex flex-col">
             <Navbar />
             <main className="flex-grow">
                 {children}

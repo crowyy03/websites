@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 import { MENU_ITEMS } from '../data';
 
 export const SignatureExperience = () => {
-    // Получаем signature блюда
     const signatureDishes = MENU_ITEMS
         .flatMap(category => category.items)
         .filter(item => item.isSignature)
@@ -28,7 +27,6 @@ export const SignatureExperience = () => {
                 </p>
             </motion.div>
 
-            {/* Signature Dishes */}
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
                 {signatureDishes.map((dish, index) => {
                     const ovalStyles = [
@@ -50,17 +48,13 @@ export const SignatureExperience = () => {
                             style={style}
                             className="bg-white p-8 border border-white/50 relative overflow-hidden flex flex-col h-full text-center"
                         >
-                            {/* Name at top - centered */}
                             <h3 className="text-xl md:text-2xl font-semibold text-warm-black break-words leading-tight mb-3 handwritten">
                                 {dish.name}
                             </h3>
 
-                            {/* Description in middle - flexible */}
                             <p className="text-warm-black/70 mb-4 leading-relaxed break-words overflow-wrap-anywhere flex-grow text-sm">
                                 {dish.description}
                             </p>
-
-                            {/* Price at bottom - centered */}
                             <div className="mt-auto">
                                 <div className="text-xl font-bold text-amber-dark">
                                     {dish.price}₽
@@ -71,7 +65,6 @@ export const SignatureExperience = () => {
                 })}
             </div>
 
-            {/* Concept Explanation */}
             <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}

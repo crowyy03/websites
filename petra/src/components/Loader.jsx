@@ -27,7 +27,6 @@ export const Loader = ({ onComplete }) => {
                 className="fixed inset-0 z-[100] bg-plaster flex items-center justify-center"
             >
                 <div className="flex flex-col items-center gap-8">
-                    {/* Timer */}
                     <motion.div
                         className="text-2xl font-semibold text-amber-dark"
                         initial={{ opacity: 0 }}
@@ -36,7 +35,6 @@ export const Loader = ({ onComplete }) => {
                         {percent}%
                     </motion.div>
 
-                    {/* Text */}
                     <div className="flex flex-col items-center gap-2">
                         <motion.h1
                             initial={{ y: 100, opacity: 0 }}

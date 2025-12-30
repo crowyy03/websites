@@ -23,7 +23,6 @@ export const Contact = () => {
             </motion.div>
 
             <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
-                {/* Contact Info */}
                 <motion.div
                     initial={{ opacity: 0, x: -30 }}
                     whileInView={{ opacity: 1, x: 0 }}
@@ -79,7 +78,6 @@ export const Contact = () => {
                     </div>
                 </motion.div>
 
-                {/* Map Embed */}
                 <motion.div
                     initial={{ opacity: 0, x: 30 }}
                     whileInView={{ opacity: 1, x: 0 }}
@@ -99,7 +97,6 @@ export const Contact = () => {
                 </motion.div>
             </div>
 
-            {/* How to Get There */}
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}

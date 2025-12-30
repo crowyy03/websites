@@ -39,7 +39,6 @@ export const Menu = () => {
                 </p>
             </motion.div>
 
-            {/* Search */}
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -56,7 +55,6 @@ export const Menu = () => {
                 />
             </motion.div>
 
-            {/* Category Tabs */}
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -81,7 +79,6 @@ export const Menu = () => {
                 ))}
             </motion.div>
 
-            {/* Menu Items Grid */}
             <AnimatePresence mode="wait">
                 <motion.div
                     key={currentCategory}
@@ -111,27 +108,13 @@ export const Menu = () => {
                                 style={style}
                                 className="bg-white p-6 shadow-sm border border-white/50 flex flex-col h-full overflow-hidden text-center"
                             >
-                                {/* Name at top - centered */}
                                 <h3 className="text-xl md:text-2xl font-semibold text-warm-black break-words leading-tight mb-3 handwritten">
                                     {item.name}
-                                    {item.isSignature && (
-                                        <span className="ml-2 text-xs px-2 py-1 bg-lemon/20 text-lemon-dark rounded-full whitespace-nowrap">
-                                            Signature
-                                        </span>
-                                    )}
-                                    {item.isNew && (
-                                        <span className="ml-2 text-xs px-2 py-1 bg-aegean/20 text-aegean-dark rounded-full whitespace-nowrap">
-                                            New
-                                        </span>
-                                    )}
                                 </h3>
 
-                                {/* Description in middle - flexible */}
                                 <p className="text-warm-black/60 text-sm leading-relaxed break-words overflow-wrap-anywhere flex-grow mb-3">
                                     {item.description}
                                 </p>
-
-                                {/* Price at bottom - centered */}
                                 <div className="mt-auto">
                                     <span className="text-lg font-bold text-amber-dark">
                                         {item.price}₽

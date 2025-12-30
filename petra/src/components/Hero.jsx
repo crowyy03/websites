@@ -6,7 +6,6 @@ import { INFO } from '../data';
 export const Hero = () => {
     return (
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-            {/* Background Image */}
             <div className="absolute inset-0 z-0">
                 <img
                     src="/assets/hero_image.png"
@@ -16,7 +15,6 @@ export const Hero = () => {
                 <div className="absolute inset-0 bg-gradient-to-b from-plaster/40 via-transparent to-plaster/60" />
             </div>
 
-            {/* Content Overlay */}
             <div className="container mx-auto px-6 relative z-10">
                 <motion.div
                     initial={{ opacity: 0, y: 50 }}
@@ -44,7 +42,6 @@ export const Hero = () => {
                 </motion.div>
             </div>
 
-            {/* Scroll Indicator */}
             <motion.div
                 className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-50 z-10"
                 animate={{ y: [0, 10, 0] }}

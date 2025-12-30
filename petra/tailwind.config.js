@@ -29,9 +29,6 @@ export default {
                 sans: ['Manrope', 'sans-serif'],
                 serif: ['Cormorant Garamond', 'serif'],
             },
-            backgroundImage: {
-                'noise': "url('/assets/noise.png')",
-            },
             dropShadow: {
                 'niche': '0 10px 15px rgba(255, 200, 87, 0.2)',
                 'lemon': '0 10px 20px rgba(255, 230, 0, 0.3)',

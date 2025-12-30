@@ -4,7 +4,6 @@ import { Star } from 'lucide-react';
 import { REVIEWS } from '../data';
 
 export const Reviews = () => {
-    // Подсчет статистики
     const stats = {
         vibe: REVIEWS.filter(r => r.text.toLowerCase().includes('atmosphere') || r.text.toLowerCase().includes('vibe') || r.text.toLowerCase().includes('интерьер') || r.text.toLowerCase().includes('атмосфера')).length,
         interior: REVIEWS.filter(r => r.text.toLowerCase().includes('interior') || r.text.toLowerCase().includes('интерьер') || r.text.toLowerCase().includes('уютн')).length,
@@ -29,7 +28,6 @@ export const Reviews = () => {
                 </p>
             </motion.div>
 
-            {/* Stats */}
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -49,7 +47,6 @@ export const Reviews = () => {
                 ))}
             </motion.div>
 
-            {/* Reviews Grid */}
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {REVIEWS.map((review, index) => {
                     const ovalStyles = [
@@ -71,7 +68,6 @@ export const Reviews = () => {
                             style={style}
                             className="bg-white p-6 shadow-sm border border-white/50 flex flex-col h-full overflow-hidden text-center"
                         >
-                            {/* Stars at top - centered */}
                             <div className="flex items-center justify-center gap-1 mb-3">
                                 {[...Array(5)].map((_, i) => (
                                     <Star
@@ -82,12 +78,10 @@ export const Reviews = () => {
                                 ))}
                             </div>
                             
-                            {/* Text in middle - flexible */}
                             <p className="text-warm-black/80 mb-4 leading-relaxed break-words overflow-wrap-anywhere flex-grow">
                                 "{review.text}"
                             </p>
                             
-                            {/* Author and date at bottom - centered */}
                             <div className="flex flex-col items-center gap-1 text-sm mt-auto">
                                 <span className="font-medium text-warm-black">{review.author}</span>
                                 <span className="text-warm-black/40">{new Date(review.date).toLocaleDateString('ru-RU')}</span>
