@@ -166,6 +166,14 @@
 }
 
 @media (max-width: 900px) {
+    .menu-content-desktop {
+        display: none;
+    }
+
+    .menu-content-mobile {
+        display: block;
+    }
+
     .menu-content {
         grid-template-columns: 1fr;
         gap: 0;
