@@ -81,15 +81,6 @@ const menuData = {
             ]
         },
         {
-            category: 'Завтрак',
-            items: [
-                { name: 'Crepes al cioccolato', price: '900', weight: '230 г' },
-                { name: 'Pancake', price: '780', weight: '270 г' },
-                { name: 'Pancake mini', price: '780', weight: '220 г' },
-                { name: 'Pancake nutella', price: '1020', weight: '280 г' },
-            ]
-        },
-        {
             category: 'Десерты',
             items: [
                 { name: 'Cheese cake', price: '660', weight: '220 г' },
@@ -115,6 +106,15 @@ const menuData = {
                 { name: 'Фреш апельсиновый', price: '700', weight: '300 мл' },
                 { name: 'Фреш грейпфрутовый', price: '770', weight: '300 мл', description: 'Свежевыжатый грейпфрутовый сок' },
             ]
+        },
+        {
+            category: 'Завтрак',
+            items: [
+                { name: 'Crepes al cioccolato', price: '900', weight: '230 г' },
+                { name: 'Pancake', price: '780', weight: '270 г' },
+                { name: 'Pancake mini', price: '780', weight: '220 г' },
+                { name: 'Pancake nutella', price: '1020', weight: '280 г' },
+            ]
         }
     ]
 };
@@ -123,6 +123,12 @@ const Menu = () => {
     return (
         <section id="menu" className="menu-section">
             <div className="container">
+                <div className="menu-description">
+                    <p>La Piada — итальянский ресторан напротив Юсуповского сада на Садовой.</p>
+                    <p>В нашем интерьере мы использовали эффект состаренности и потертости — старая кирпичная кладка проглядывает сквозь бетонную штукатурку, а стены украшены яркими изображениями.</p>
+                    <p>Мы делаем домашнюю пасту и печем фирменные лепешки с начинками — пьяды. В нашем меню более десяти вариантов пьяд: с цуккини и баклажанами, миксом сыров и острой колбасой или с моцарреллой и лососем. Пасту мы лепим двух видов: спагетти и лингвини. Разливаем вино по бокалам и наливаем домашние лимонады, например, с розмарином.</p>
+                </div>
+
                 <h2 className="section-title">НАШЕ <span className="accent-text">МЕНЮ</span></h2>
 
                 <AnimatePresence mode="wait">

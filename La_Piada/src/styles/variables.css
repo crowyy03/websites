@@ -1,25 +1,20 @@
 :root {
-  /* Итальянская цветовая палитра - теплые тона */
-  --bg-primary: #faf8f5;
-  /* Светлый кремовый фон */
-  --bg-secondary: #fffefb;
-  --bg-glass: rgba(250, 248, 245, 0.95);
+  /* Спокойная зеленая палитра */
+  --bg-primary: #f0f5ed;
+  /* Очень светлый зеленый фон */
+  --bg-secondary: #ffffff;
+  --bg-glass: rgba(240, 245, 237, 0.95);
 
-  --text-primary: #2c2416;
-  /* Темный коричневый */
-  --text-secondary: #5a4a3a;
-  --text-accent: #8b6f47;
-  /* Золотисто-коричневый акцент */
+  --text-primary: #4a5d42;
+  /* Темный болотный зеленый */
+  --text-secondary: #6b7a63;
+  --text-accent: #5a6d52;
+  /* Болотный зеленый акцент */
 
-  --accent-red: #c41e3a;
-  /* Итальянский красный */
-  --accent-red-dark: #9e1b32;
-  --accent-red-light: #e63950;
-  
-  --accent-green: #2d5016;
-  /* Итальянский зеленый */
-  --accent-green-dark: #1f350f;
-  --accent-green-light: #4a7a28;
+  --accent-green: #6b7a63;
+  /* Болотный зеленый основной (muted, earthy) */
+  --accent-green-dark: #4a5d42;
+  --accent-green-light: #8a9a82;
 
   /* Typography */
   --font-heading: 'Anton', sans-serif;
@@ -32,11 +27,11 @@
 }
 
 .dark-mode {
-  --bg-primary: #1a1612;
-  /* Темный коричневый фон */
-  --bg-secondary: #2a241f;
-  --text-primary: #f5f0e8;
-  --text-secondary: #c4b5a0;
-  --bg-glass: rgba(26, 22, 18, 0.95);
-  /* Итальянские цвета остаются */
+  --bg-primary: #3a3833;
+  /* Темный болотный зеленый фон */
+  --bg-secondary: #4a4843;
+  --text-primary: #d8e0d5;
+  --text-secondary: #a8b5a0;
+  --bg-glass: rgba(58, 56, 51, 0.95);
+  /* Болотный зеленый */
 }

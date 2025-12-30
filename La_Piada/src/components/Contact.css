@@ -1,7 +1,6 @@
 .contact-section {
     padding: 100px 0;
-    background: linear-gradient(135deg, var(--accent-red-light) 0%, var(--accent-red) 100%);
-    /* Болотный зеленый градиент */
+    background: linear-gradient(135deg, var(--accent-green-light) 0%, var(--accent-green) 100%);
     color: var(--text-primary);
 }
 

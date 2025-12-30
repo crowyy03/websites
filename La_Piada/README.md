@@ -22,6 +22,26 @@ npm run dev
 npm run build
 ```
 
+## Технологии
+
+- React 19
+- Vite
+- Framer Motion
+- Lucide React
+
+## Разработка
+
+```bash
+npm install
+npm run dev
+```
+
+## Сборка
+
+```bash
+npm run build
+```
+
 ## Деплой на GitHub Pages
 
 1. **Создайте репозиторий на GitHub:**

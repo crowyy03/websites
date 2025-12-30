@@ -2,7 +2,7 @@
 @import './variables.css';
 
 ::selection {
-    background-color: var(--accent-red);
+    background-color: var(--accent-green);
     color: var(--bg-primary);
 }
 
@@ -40,7 +40,7 @@ ul {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--accent-red);
+    background: var(--accent-green);
 }
 
 /* Utilities */
@@ -51,7 +51,7 @@ ul {
 }
 
 .accent-text {
-    color: var(--accent-red);
+    color: var(--accent-green);
 }
 
 .border-box {

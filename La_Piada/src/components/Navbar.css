@@ -44,7 +44,7 @@
 }
 
 .nav-links a:hover {
-    color: var(--accent-red);
+    color: var(--accent-green);
 }
 
 .mobile-toggle {
