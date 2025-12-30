@@ -65,10 +65,10 @@ jobs:
           mkdir -p pages/petra
           mkdir -p pages/green28
           mkdir -p pages/La_Piada
-          cp -r v-pitere-pit/dist/* pages/v-pitere-pit/
-          cp -r petra/dist/* pages/petra/
-          cp -r green28/dist/* pages/green28/
-          cp -r La_Piada/dist/* pages/La_Piada/
+          cp -r v-pitere-pit/dist/* pages/v-pitere-pit/ || true
+          cp -r petra/dist/* pages/petra/ || true
+          cp -r green28/dist/* pages/green28/ || true
+          cp -r La_Piada/dist/* pages/La_Piada/ || true
           # Копируем index.html для редиректа с корня
           if [ -f index.html ]; then
             cp index.html pages/
@@ -76,8 +76,6 @@ jobs:
       
       - name: Setup Pages
         uses: actions/configure-pages@v4
-        with:
-          enablement: true
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
