@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import './Menu.css';
 
@@ -120,6 +121,8 @@ const menuData = {
 };
 
 const Menu = () => {
+    const [selectedCategory, setSelectedCategory] = useState(0);
+
     return (
         <section id="menu" className="menu-section">
             <div className="container">
@@ -131,37 +134,72 @@ const Menu = () => {
 
                 <h2 className="section-title">НАШЕ <span className="accent-text">МЕНЮ</span></h2>
 
+                <div className="menu-categories-scroll">
+                    {menuData.food.map((category, index) => (
+                        <button
+                            key={index}
+                            className={`category-tab ${selectedCategory === index ? 'active' : ''}`}
+                            onClick={() => setSelectedCategory(index)}
+                        >
+                            {category.category}
+                        </button>
+                    ))}
+                </div>
+
                 <AnimatePresence mode="wait">
                     <motion.div
+                        key={selectedCategory}
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -20 }}
                         transition={{ duration: 0.3 }}
-                        className="menu-content"
+                        className="menu-content menu-content-mobile"
                     >
-                        {menuData.food.map((category, index) => (
-                            <div key={index} className="menu-category">
-                                <h3 className="category-title">{category.category}</h3>
-                                <div className="menu-items">
-                                    {category.items.map((item, i) => (
-                                        <div key={i} className="menu-item">
-                                            <div className="menu-item-row">
-                                                <span className="item-name">{item.name}</span>
-                                                <span className="item-price">{item.price} ₽</span>
-                                            </div>
-                                            {item.weight && (
-                                                <p className="item-weight">{item.weight}</p>
-                                            )}
-                                            {item.description && (
-                                                <p className="item-description">{item.description}</p>
-                                            )}
+                        <div className="menu-category">
+                            <h3 className="category-title">{menuData.food[selectedCategory].category}</h3>
+                            <div className="menu-items">
+                                {menuData.food[selectedCategory].items.map((item, i) => (
+                                    <div key={i} className="menu-item">
+                                        <div className="menu-item-row">
+                                            <span className="item-name">{item.name}</span>
+                                            <span className="item-price">{item.price} ₽</span>
                                         </div>
-                                    ))}
-                                </div>
+                                        {item.weight && (
+                                            <p className="item-weight">{item.weight}</p>
+                                        )}
+                                        {item.description && (
+                                            <p className="item-description">{item.description}</p>
+                                        )}
+                                    </div>
+                                ))}
                             </div>
-                        ))}
+                        </div>
                     </motion.div>
                 </AnimatePresence>
+
+                <div className="menu-content menu-content-desktop">
+                    {menuData.food.map((category, index) => (
+                        <div key={index} className="menu-category">
+                            <h3 className="category-title">{category.category}</h3>
+                            <div className="menu-items">
+                                {category.items.map((item, i) => (
+                                    <div key={i} className="menu-item">
+                                        <div className="menu-item-row">
+                                            <span className="item-name">{item.name}</span>
+                                            <span className="item-price">{item.price} ₽</span>
+                                        </div>
+                                        {item.weight && (
+                                            <p className="item-weight">{item.weight}</p>
+                                        )}
+                                        {item.description && (
+                                            <p className="item-description">{item.description}</p>
+                                        )}
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    ))}
+                </div>
 
                 <div className="menu-download">
                     <p>Не нашли то, что искали?</p>
