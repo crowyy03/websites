@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
+const logoSrc = new URL('../public/image/Logo.png', import.meta.url).href;
+
 export const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -49,13 +51,13 @@ export const Header: React.FC = () => {
           
           {/* Logo - Image Only */}
           <div className="flex items-center cursor-pointer" onClick={() => window.scrollTo(0,0)}>
-             <div className="w-16 h-16 md:w-20 md:h-20 relative">
-                <img 
-                    src="/image/Logo.png" 
-                    alt="В Питере Пить" 
-                    className="w-full h-full object-contain"
-                />
-             </div>
+            <div className="w-16 h-16 md:w-20 md:h-20 relative">
+              <img 
+                src={logoSrc} 
+                alt="В Питере Пить" 
+                className="w-full h-full object-contain"
+              />
+            </div>
           </div>
 
           {/* Desktop Nav */}
