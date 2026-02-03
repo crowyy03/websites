@@ -1,29 +1,20 @@
-# В Питере Пить - Сайт ресторана
+<div align="center">
+<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+</div>
 
-Современный сайт гастробистро и бара в Санкт-Петербурге.
+# Run and deploy your AI Studio app
 
-## Технологии
+This contains everything you need to run your app locally.
 
-- React 19
-- Vite
-- Framer Motion
-- Lucide React
+View your app in AI Studio: https://ai.studio/apps/drive/1LtL375ZGqXIX7dugFxtkJLbb9LnD6Wls
 
-## Разработка
+## Run Locally
 
-```bash
-npm install
-npm run dev
-```
+**Prerequisites:**  Node.js
 
-## Сборка
 
-```bash
-npm run build
-```
-
-## Деплой
-
-Сайт автоматически деплоится на GitHub Pages при пуше в ветку `main`.
-
-URL: https://crowyy03.github.io/websites/v-pitere-pit/
+1. Install dependencies:
+   `npm install`
+2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+3. Run the app:
+   `npm run dev`
