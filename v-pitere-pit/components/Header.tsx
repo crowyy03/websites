@@ -51,7 +51,7 @@ export const Header: React.FC = () => {
           
           {/* Logo - Image Only */}
           <div className="flex items-center cursor-pointer" onClick={() => window.scrollTo(0,0)}>
-            <div className="w-16 h-16 md:w-20 md:h-20 relative">
+            <div className="w-24 h-24 md:w-32 md:h-32 relative">
               <img 
                 src={logoSrc} 
                 alt="В Питере Пить" 
