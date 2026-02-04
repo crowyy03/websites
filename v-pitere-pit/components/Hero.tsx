@@ -10,12 +10,28 @@ const videoSrc = import.meta.env.DEV
 export const Hero: React.FC = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
 
-  useEffect(() => {
+  const playVideo = () => {
     const v = videoRef.current;
     if (!v) return;
     v.muted = true;
     v.play().catch(() => {});
+  };
+
+  useEffect(() => {
+    playVideo();
   }, []);
+
+  const handleCanPlay = () => {
+    playVideo();
+  };
+
+  const handleEnded = () => {
+    const v = videoRef.current;
+    if (v) {
+      v.currentTime = 0;
+      v.play().catch(() => {});
+    }
+  };
 
   const scrollToReservation = () => {
     document.getElementById('reservation')?.scrollIntoView({ behavior: 'smooth' });
@@ -36,6 +52,8 @@ export const Hero: React.FC = () => {
           loop
           playsInline
           preload="auto"
+          onCanPlay={handleCanPlay}
+          onEnded={handleEnded}
           className="absolute inset-0 w-full h-full object-cover"
         >
           <source src={videoSrc} type="video/mp4" />
