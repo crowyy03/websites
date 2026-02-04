@@ -1,10 +1,21 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { Button } from './ui/Button';
 import { motion } from 'framer-motion';
 
-const videoSrc = `${import.meta.env.BASE_URL}video/hero.mov`;
+const base = import.meta.env.BASE_URL;
+const videoSrcMov = `${base}video/hero.mov`;
+const videoSrcMp4 = `${base}video/hero.mp4`;
 
 export const Hero: React.FC = () => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const v = videoRef.current;
+    if (!v) return;
+    v.muted = true;
+    v.play().catch(() => {});
+  }, []);
+
   const scrollToReservation = () => {
     document.getElementById('reservation')?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -15,16 +26,19 @@ export const Hero: React.FC = () => {
 
   return (
     <div className="relative h-screen w-full overflow-hidden bg-midnight">
-      {/* Video Background */}
+      {/* Video Background (без звука); для Chrome нужен hero.mp4 — конвертируй hero.mov в mp4 */}
       <div className="absolute inset-0 z-0">
         <video
+          ref={videoRef}
           autoPlay
           muted
           loop
           playsInline
+          preload="auto"
           className="absolute inset-0 w-full h-full object-cover"
         >
-          <source src={videoSrc} type="video/quicktime" />
+          <source src={videoSrcMp4} type="video/mp4" />
+          <source src={videoSrcMov} type="video/quicktime" />
         </video>
         {/* Gradient Overlay for Readability */}
         <div className="absolute inset-0 bg-gradient-to-b from-midnight/90 via-midnight/30 to-midnight" />
