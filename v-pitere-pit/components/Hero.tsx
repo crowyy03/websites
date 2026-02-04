@@ -2,9 +2,10 @@ import React, { useRef, useEffect } from 'react';
 import { Button } from './ui/Button';
 import { motion } from 'framer-motion';
 
-const base = import.meta.env.BASE_URL;
-const videoSrcMov = `${base}video/hero.mov`;
-const videoSrcMp4 = `${base}video/hero.mp4`;
+// В dev Vite отдаёт public с корня (/video/...), в prod — с base (см. vite.config base).
+const videoSrc = import.meta.env.DEV
+  ? '/video/hero.mp4'
+  : `${import.meta.env.BASE_URL}video/hero.mp4`;
 
 export const Hero: React.FC = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -26,7 +27,7 @@ export const Hero: React.FC = () => {
 
   return (
     <div className="relative h-screen w-full overflow-hidden bg-midnight">
-      {/* Video Background (без звука); для Chrome нужен hero.mp4 — конвертируй hero.mov в mp4 */}
+      {/* Фон: MP4 без звука. Файл: public/video/hero.mp4 (H.264). Конвертация: ffmpeg -i 1.mov -an -c:v libx264 -movflags +faststart -y public/video/hero.mp4 */}
       <div className="absolute inset-0 z-0">
         <video
           ref={videoRef}
@@ -37,8 +38,7 @@ export const Hero: React.FC = () => {
           preload="auto"
           className="absolute inset-0 w-full h-full object-cover"
         >
-          <source src={videoSrcMp4} type="video/mp4" />
-          <source src={videoSrcMov} type="video/quicktime" />
+          <source src={videoSrc} type="video/mp4" />
         </video>
         {/* Gradient Overlay for Readability */}
         <div className="absolute inset-0 bg-gradient-to-b from-midnight/90 via-midnight/30 to-midnight" />
